@@ -10,5 +10,12 @@ before_install:
 
 script:
  - bundle exec rspec
-
+ 
+deploy:
+ provider: heroku
+ api_key: addf5822-76e3-4fde-bd1d-1bc3da4f729c
+ app: sleepy-waters-63289
+ run: "rake db:migrate"
+ on:
+  all_branches: true
  

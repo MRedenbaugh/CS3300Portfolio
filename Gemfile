@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'devise'
+
 # Use ActiveStorage variant
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment
@@ -63,6 +65,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+
+  gem 'factory_bot_rails'
 
   
 end
