@@ -1,16 +1,17 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
+<div class="jumbotron">
+  <h1 class="display-4"><%= @project.title %></h1>
+  <hr class="my-4">
+  <p><%= @project.description %></p>
+
+</div>
+
+
 
 <% if student_signed_in? %>
-  <%= link_to 'Edit', edit_project_path(@project) %> |
+<button type="button" class="btn btn-outline-secondary"><%= link_to 'Edit', edit_project_path(@project) %></button>
 <% end %>
-<%= link_to 'Back', projects_path %>
+
+<button type="button" class="btn btn-outline-secondary"><%= link_to 'Back', root_path %></button>
+

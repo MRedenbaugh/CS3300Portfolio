@@ -1,9 +1,18 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Projects</h1>
 
-<table>
-  <thead>
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-4">Welcome To Michael Redenbaugh's Portfolio!</h1>
+  
+  <hr class="my-4">
+  <p>This a portfolio I created for my CS3300 class. My portfolio contains projects that I have worked on in my classes. Feel free to take a look!</p>
+
+</div>
+
+
+<h1 >Projects</h1>
+
+<table class = "table">
+  <thead class="thead-dark">
     <tr>
       <th>Title</th>
       <th>Description</th>
@@ -15,7 +24,7 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.title %></td>
-        <td><%= project.description %></td>
+        <td><%= project.description  %></td>
         <td><%= link_to 'Show', project %></td>
         <% if student_signed_in? %>
           <td><%= link_to 'Edit', edit_project_path(project) %></td>
@@ -27,11 +36,5 @@
 </table>
 
 <br>
-<% if student_signed_in? %>
-  <%= link_to 'New Project', new_project_path %>
-  <%= link_to 'Sign Out', destroy_student_session_path, method: :delete %>
-<% else %>
-  <%= link_to 'Sign Up', new_student_registration_path %>
-  <%= link_to 'Sign In', new_student_session_path %>
-<% end %>
+
 
